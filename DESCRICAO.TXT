@@ -1,0 +1,27 @@
+CONCEITO DE ESTADO
+
+- Estada é uma variavel, ele serve para quando mudar um valor de uma variavel não renderizar a pagina.
+    ex de estado: usa o REACT HOOKS.
+    const [ users, setUsers ] = useState([]);
+    obs: Estado é um valor imutavel.
+
+    function addNewUser(){
+        setUsers([{ name: inputName.current.value, age: inputAge.current.value}])
+    }
+
+REACT HOOKS
+
+useRef => Cria uma referencia no item pra poder ter acesso a ele, foi usado no input.
+ Cria uma const(const InputName = useRef()), coloca o valor da const dentro do ref(ref={ InputName }).
+ quando for usar tem que detalhar o caminho de qual informação quer pegar,
+ ex: { name: inputName.current.value, age: inputAge.current.value}).
+
+ useEffet => Toda vez que for alterado alguma coisa o useEffet é chamado. 
+ ele é chamado quando a pagina carrega(vai chamar a função que foi criada)
+ Ele é chamado tbm quando um estado que esta no array de dependencia do useEffet é alterado.
+
+
+ como usar o useEffet: useEffet(() => {
+    console.log("Fui chamado!")
+ }, [users])
+
